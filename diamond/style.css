@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box !important;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background: #233637;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
