@@ -5,6 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .card {
@@ -16,6 +17,21 @@ body {
   border-left: 170px solid #ccc;
   animation: showenvelope 2s ease-in;
   animation-iteration-count: 1;
+}
+
+.card-open {
+  width: 0;
+  height: 0;
+  border-top: 100px solid transparent;
+  border-right: 170px solid transparent;
+  border-bottom: 100px solid #ccc;
+  border-left: 170px solid transparent;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.card-open.opened {
+  opacity: 1;
 }
 
 .heart {
