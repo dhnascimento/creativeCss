@@ -17,86 +17,48 @@ body{
   height: 200px;
   position: relative;
   transform: rotate(45deg);
-  animation: spinDiamond 5s infinite;
+  /* animation: spinDiamond 5s infinite;
+  animation-delay: 1s; */
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 8s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
   animation-delay: 1s;
+  border-color: red transparent transparent transparent;
 }
-
-.diamond span:nth-child(1) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 50px solid #233637;
-  border-left: 50px solid #233637;
-  border-bottom: 50px solid white; 
-  border-right: 50px solid green;
+.lds-ring div:nth-child(2) {
+  animation-delay: 2s;
+  border-color: blueviolet transparent transparent transparent;
 }
-
-.diamond span:nth-child(2) {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-top: 50px solid yellow;
-  border-left: 50px solid red;
-  border-bottom: 50px solid brown; 
-  border-right: 50px solid green;
+.lds-ring div:nth-child(3) {
+  animation-delay: 5s;
+  border-color: blue transparent transparent transparent;
 }
-
-.diamond span:nth-child(3) {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  width: 0;
-  height: 0;
-  border-top: 50px solid blue;
-  border-left: 50px solid aquamarine;
-  border-bottom: 50px solid palegreen; 
-  border-right: 50px solid darksalmon;
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
-.diamond span:nth-child(4) {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-top: 50px solid red;
-  border-left: 50px solid yellow;
-  border-bottom: 50px solid white; 
-  border-right: 50px solid green;
-}
-
-@keyframes spinDiamond {
-  from {transform: rotate(45deg);}
-  to {transform: rotate(405deg);}
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

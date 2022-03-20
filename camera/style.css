@@ -1,0 +1,85 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 205px;
+  height: 155px;
+  background-color: #D6D6D6;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px -13px black;
+  position: relative;
+}
+
+.lens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 125px;
+  background-color: #f5f5f5;
+  box-shadow: 0 8px 0 0 #c0c0c0;
+  border-radius: 50%;
+}
+
+.inner-lens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 105px;
+  height: 105px;
+  background-color: #00695C;
+  border-radius: 50%;
+}
+
+.inner-lens-2 {
+  border-top: 31px solid #00897B;
+  border-right: 31px solid #4DB6AC;
+  border-bottom: 31px solid #80CBC4;
+  border-left: 31px solid #26a69A;
+  border-radius: 50%;
+}
+
+.flash {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 0 #C0C0C0;
+  right: 15px;
+  top: 15px;
+}
+
+.button {
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  background-color: #009587;
+  border-radius: 60px;
+  left: 16px;
+  top: -5px;
+  transition: all 500ms ease-in-out;
+}
+
+.button:hover {
+  height: 5px;
+  top: -1px;
+}
+
+.flash-animation {
+  animation: flash 1s;
+  animation-delay: 500ms;
+}
+
+@keyframes flash {
+  50% {
+    opacity: 0;
+  }
+}
