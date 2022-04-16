@@ -1,0 +1,93 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+}
+
+.gear {
+  width: 110px;
+  height: 110px;
+  background-color: #5dc59d;
+  border-radius: 50%;
+  animation: counter-clockwise  4s linear infinite;
+}
+
+.gear.gear-2 {
+  background-color: red;
+  position: absolute;
+  top: -96%;
+  left: 95%;
+  animation: clockwise-red  4s linear infinite;
+}
+
+.gear.gear-2 .bar {
+  background-color: red;
+}
+
+
+.gear.gear-3 {
+  background-color: blueviolet;
+  position: absolute;
+  top: 129%;
+  left: 36%;
+  animation: clockwise-blueviolet  4s linear infinite;
+}
+
+.gear.gear-3 .bar {
+  background-color: blueviolet;
+}
+
+
+
+.gear-inner {
+  width: 55px;
+  height: 55px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bar {
+  width: 170px;
+  height: 40px;
+  background-color: #5dc59d;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bar:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.bar:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+@keyframes counter-clockwise {
+  from {transform: rotate(360deg);}
+  to {transform: rotate(0deg);}
+}
+
+@keyframes clockwise-red {
+  from {transform: rotate(60deg);}
+  to {transform: rotate(420deg);}
+}
+
+@keyframes clockwise-blueviolet {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
