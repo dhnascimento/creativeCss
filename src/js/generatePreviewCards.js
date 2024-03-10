@@ -13,11 +13,12 @@
                 .join(" ");
             // Construct the HTML for each card
             return `
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden max-w-sm m-4">
+            <div class="flex justify-center">
+                <div class="bg-mindaro rounded-lg shadow-lg overflow-hidden max-w-sm m-4 min-w-[300px]">
                     <a href="/${item}" class="block relative h-48">
                         <img alt="${title}"
                          class="object-cover w-full h-full"
-                         src="string/preview.png" 
+                         src="${item}/preview.png"
                          onerror="this.onerror=null; this.src='/public/fallback.png'"
                          >
                     </a>
@@ -25,6 +26,7 @@
                         <h2 class="text-xl font-bold text-center">${title}</h2>
                     </div>
                 </div>
+            </div>    
             `;
         }).join('');
 
