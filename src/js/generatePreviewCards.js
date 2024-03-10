@@ -1,7 +1,7 @@
 
 (async function generatePreviewCards() {
     try {
-        const pagesListJSON = await fetch('/src/foldersList.json');
+        const pagesListJSON = await fetch('/creativeCss/src/foldersList.json');
         console.log(pagesListJSON);
         let pagesList = await pagesListJSON.json();
         pagesListString =  pagesList.map(item => {
