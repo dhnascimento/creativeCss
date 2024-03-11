@@ -15,11 +15,11 @@
             return `
             <div class="flex justify-center">
                 <div class="bg-mindaro rounded-lg shadow-lg overflow-hidden max-w-sm m-4 min-w-[300px]">
-                    <a href="/${item}" class="block relative h-48">
+                    <a href="${item}" class="block relative h-48">
                         <img alt="${title}"
                          class="object-cover w-full h-full"
                          src="${item}/preview.png"
-                         onerror="this.onerror=null; this.src='/public/fallback.png'"
+                         onerror="this.onerror=null; this.src='public/fallback.png'"
                          >
                     </a>
                     <div class="p-4">
